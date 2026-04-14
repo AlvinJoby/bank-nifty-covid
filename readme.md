@@ -64,6 +64,8 @@ Drawdown    -15.47%     Near Highs   70.67%     Up Days   49.82%
 
 The index spent ~70% of its time near its peak — dips were shallow and bought quickly. Volatility at `0.0126` was low. Nothing remarkable, which is exactly the point: this is the baseline that makes everything that follows look so extreme.
 
+![Pre-COVID Phase](outputs/pre_covid.png)
+
 <br/>
 
 ### 🔴 COVID &nbsp;·&nbsp; *Historic crash, historic bounce*
@@ -77,6 +79,8 @@ Nearly 42% gone in 24 calendar days. Volatility doubled. For context — the 200
 
 The recovery was just as violent in the other direction. From the March 2020 low, the index more than doubled before the phase ended. Aggressive rate cuts, fiscal stimulus, and the realization that banks weren't facing a solvency crisis all contributed to the rebound.
 
+![COVID Phase](outputs/covid.png)
+
 <br/>
 
 ### 🟢 Post-COVID &nbsp;·&nbsp; *New highs, calmer than ever*
@@ -87,6 +91,8 @@ Volatility          0.0110    Drawdown      -17.07%    Up Days   53.66%
 ```
 
 By 2022 the index wasn't just recovered — it had structurally re-rated. Trading 67.6% above its pre-COVID peak, with volatility actually *below* the pre-COVID baseline (`0.011` vs `0.0126`). Corrections happened, but they were normal-sized and got bought.
+
+![Post-COVID Phase](outputs/post_covid.png)
 
 ---
 
@@ -118,6 +124,9 @@ bank-nifty-covid/
 ├── data/            ← raw CSV from Yahoo Finance
 ├── phases/          ← phase-split datasets
 ├── outputs/         ← generated charts
+│   ├── pre_covid.png
+│   ├── covid.png
+│   └── post_covid.png
 │
 ├── analysis.py      ← core metrics + phase logic
 └── graph.py         ← all plotting code
