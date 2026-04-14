@@ -2,13 +2,13 @@
 
 ## Overview
 
-This project analyzes how the NIFTY Bank index behaved before, during, and after the COVID-19 period.
+This project analyzes how the NIFTY Bank index behaved across three distinct periods surrounding COVID-19.
 
-The data is divided into three phases to understand how market behavior changed over time:
+The dataset is segmented into phases to observe how market behavior changed under different conditions:
 
-* Pre-COVID
-* COVID Phase
-* Post-COVID
+* Pre-COVID (baseline)
+* COVID phase (shock period)
+* Post-COVID (recovery)
 
 ---
 
@@ -34,29 +34,13 @@ The data is divided into three phases to understand how market behavior changed 
 
 ---
 
-## Visuals
+# Analysis
 
-### Pre-COVID
+## 1. Pre-COVID Phase
 
 ![Pre-COVID](outputs/pre_covid.png)
 
----
-
-### COVID Phase
-
-![COVID](outputs/covid.png)
-
----
-
-### Post-COVID
-
-![Post-COVID](outputs/post_covid.png)
-
----
-
-## Metrics
-
-### Pre-COVID
+### Metrics
 
 | Metric              | Value   |
 | ------------------- | ------- |
@@ -66,9 +50,18 @@ The data is divided into three phases to understand how market behavior changed 
 | Time Near Highs (%) | 70.67   |
 | Up Days (%)         | 49.82   |
 
+### Observation
+
+The index moved in a relatively stable manner during this period.
+Growth was moderate, and volatility remained low. Prices stayed near peak levels for a large portion of the time, indicating steady market conditions.
+
 ---
 
-### COVID Phase
+## 2. COVID Phase
+
+![COVID](outputs/covid.png)
+
+### Metrics
 
 | Metric                | Value   |
 | --------------------- | ------- |
@@ -79,9 +72,20 @@ The data is divided into three phases to understand how market behavior changed 
 | Down Days (%)         | 46.05   |
 | Up Days (%)           | 53.73   |
 
+### Observation
+
+The index experienced a sharp decline of around 42% within 24 days, marking a clear break from normal behavior.
+Volatility increased significantly during this phase.
+
+Despite the decline, the index recovered strongly within the same period, with a recovery of over 100% from the lowest point.
+
 ---
 
-### Post-COVID
+## 3. Post-COVID Phase
+
+![Post-COVID](outputs/post_covid.png)
+
+### Metrics
 
 | Metric                         | Value   |
 | ------------------------------ | ------- |
@@ -91,15 +95,20 @@ The data is divided into three phases to understand how market behavior changed 
 | Drawdown (%)                   | -17.07  |
 | Up Days (%)                    | 53.66   |
 
+### Observation
+
+The index moved above its pre-COVID levels and continued in an upward trend.
+Volatility reduced compared to the COVID phase, although corrections remained present.
+
+Overall movement during this phase indicates sustained recovery with continued growth.
+
 ---
 
-## Observations
+## Summary
 
-Before COVID, the index moved in a relatively stable manner. Growth was moderate, volatility was low, and prices stayed near peak levels for a significant portion of the time.
-
-During the COVID phase, the index experienced a sharp decline of around 42% in just 24 days. Volatility increased noticeably during this period. Despite the fall, the index recovered more than 100% from its lowest point within the same phase.
-
-After COVID, the index moved above its earlier levels, with an overall growth of about 40%. Volatility reduced compared to the COVID phase, although corrections of around 17% were still observed. The overall movement remained upward.
+* Pre-COVID: Stable market conditions with moderate growth
+* COVID: Sharp decline followed by high volatility and recovery
+* Post-COVID: Strong recovery with continued upward movement
 
 ---
 
@@ -109,10 +118,10 @@ After COVID, the index moved above its earlier levels, with an overall growth of
 python analysis.py
 ```
 
-Make sure:
+Requirements:
 
-* The CSV file is inside the `data/` folder
-* Output images are generated inside `outputs/`
+* CSV file inside `data/`
+* Output graphs inside `outputs/`
 
 ---
 
