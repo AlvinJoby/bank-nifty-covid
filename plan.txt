@@ -1,0 +1,213 @@
+# COVID Impact on Banking Sector (NIFTY Bank Analysis)
+
+---
+
+## 1. Objective
+
+Analyze how the banking sector behaved before, during, and after COVID-19 using historical market data.
+
+The goal is not just visualization, but to:
+
+* Establish **baseline market behavior (Pre-COVID)**
+* Measure the **severity and speed of the COVID crash**
+* Evaluate the **strength and stability of recovery**
+
+---
+
+## 2. Core Idea
+
+The project studies market behavior across three distinct phases:
+
+* **Pre-COVID (Before March 2020)** → Normal market conditions
+* **COVID Phase (March 2020 – Dec 2021)** → Shock and volatility
+* **Post-COVID (2022 onwards)** → Recovery and trend continuation
+
+Each phase is analyzed independently and then compared.
+
+---
+
+## 3. Data Used
+
+* NIFTY Bank historical index data (CSV)
+* Fields:
+
+  * Date
+  * Close Price
+
+---
+
+## 4. Approach
+
+### Phase-Based Analysis
+
+Instead of treating the dataset as a whole, the data is split into:
+
+* Pre-COVID
+* COVID
+* Post-COVID
+
+Each phase is analyzed using **custom metrics designed for that phase’s purpose**.
+
+---
+
+## 5. Metrics Computed
+
+### Pre-COVID (Baseline Behavior)
+
+* Baseline Growth
+* Volatility (normal market stability)
+* Typical Drawdown (normal corrections)
+* Stability Ratio (time spent near highs)
+* Trend Consistency (upward movement frequency)
+
+---
+
+### COVID Phase (Shock Analysis)
+
+* Crash Drawdown (severity of fall)
+* Crash Duration (speed of fall)
+* Recovery % (bounce from bottom)
+* Volatility Spike
+* Downtrend Ratio (panic pressure)
+* Uptrend Ratio (recovery behavior)
+
+---
+
+### Post-COVID (Recovery Analysis)
+
+* Recovery vs Pre-COVID Peak
+* Post-COVID Growth
+* Volatility (stability after recovery)
+* Drawdown (corrections during recovery)
+* Uptrend Ratio (trend strength)
+
+---
+
+## 6. Project Structure
+
+```
+covid-analytics/
+│── data/
+│   └── nifty_bank.csv
+│
+│── phases/
+│   ├── pre_covid.py
+│   ├── on_covid.py
+│   └── post_covid.py
+│
+│── graph.py
+│── analysis.py
+│
+│── outputs/
+│   └── phases.png
+│
+│── README.md
+│── plan.txt
+```
+
+---
+
+## 7. Workflow
+
+### Step 1 — Load and Prepare Data
+
+* Read CSV
+* Convert Date column
+* Sort data
+* Remove invalid rows
+
+---
+
+### Step 2 — Classify Phases
+
+* Label each row as:
+
+  * pre_covid
+  * covid
+  * post_covid
+
+---
+
+### Step 3 — Split Data
+
+Create separate datasets for each phase.
+
+---
+
+### Step 4 — Phase-wise Analysis
+
+* Run dedicated analysis functions:
+
+  * `pre_covid_analysis()`
+  * `on_covid_analysis()`
+  * `post_covid_analysis()`
+
+---
+
+### Step 5 — Visualization
+
+* Plot 3 subplots:
+
+  * Pre-COVID trend
+  * COVID trend
+  * Post-COVID trend
+* Save output as image
+
+---
+
+### Step 6 — Metrics Output
+
+* Print structured metrics for each phase
+
+---
+
+### Step 7 — Insight Generation
+
+* Use rule-based logic (not hardcoded text)
+* Interpret results dynamically based on data
+
+---
+
+## 8. Output
+
+The project produces:
+
+* Phase-wise trend visualization (PNG)
+* Detailed metrics for each phase
+* Data-driven insights based on computed values
+
+---
+
+## 9. Key Learnings
+
+This project demonstrates:
+
+* Time-series data handling
+* Phase-based analytical thinking
+* Financial market behavior understanding
+* Translating raw data into meaningful insights
+
+---
+
+## 10. What Makes This Different
+
+* Builds a **baseline → shock → recovery model**
+* Uses **context-aware analysis**
+* Generates **data-driven insights instead of static statements**
+
+---
+
+## 11. How to Run
+
+```
+python analysis.py
+```
+
+Make sure:
+
+* CSV is inside `/data`
+* Required folders exist
+
+---
+
+END
